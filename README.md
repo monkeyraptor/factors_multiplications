@@ -14,7 +14,7 @@ JavaScript function to get factors and multiples of a positive integer
 ## Output 
 > For both **valid** and **invalid** inputs, the output will be an `object`.
 
-> The outout `object` consists of:
+> The `object` consists of:
 ```
 {
     duration: "process in milliseconds",
