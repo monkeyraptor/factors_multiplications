@@ -1,4 +1,4 @@
-# factors_multiplications
+# gfm.js
 JavaScript function to get factors and multiples of a positive integer
 
 ## Usage
