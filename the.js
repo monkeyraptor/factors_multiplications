@@ -94,15 +94,15 @@ function gfm(a) {
         return [factors_list, multiples];
     };
 
-    var limit = 1e9; // Limit input 1 billion
-    var result = "Error: invalid input → must be a positive integer greater than 1 → max 1,000,000,000 (one billion)";
+    var limit = 1e9;
+    var temp;
+    var result = {factors: [], multiples: [], duration: ""};
     if (a > 1 && a % 1 === 0 && a > 0 && a <= limit) {
-        result = get_factor(a);
-        result = {factors: result[0], multiples: result[1]};
+        temp = get_factor(a);
+        result.factors = temp[0];
+        result.multiples = temp[1];
     }
-    if (result.constructor === Object) {
-        end = Date.now();
-        result.duration = (end - start) + " ms";
-    }
+    end = Date.now();
+    result.duration = (end - start) + " ms";
     return result;
 }
